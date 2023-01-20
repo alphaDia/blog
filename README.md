@@ -22,9 +22,11 @@ to load some data inside our database, to do so execute the following command
 
 > **docker-compose exec web python manage.py loaddata blog_data.json**
 
+
 Now head over to **localhost:8080/blog** you'll find three posts, if you want to add  
 new post by yourself you can login with these credentials **username**=admin   
 and **password**=1234 to the django admin interface.
+
 
 ## Try out the project using a virtual environment
 First of all you need to have python installed, then you can create a virtual environment  
@@ -35,11 +37,13 @@ to create a virtual environments.
 > python -m venv blog
 
 ### Activate the virtual environment
->**windows -> blog/Scripts/activate ** 
-**linux -> source blog/bin/activate**
+
+>**windows -> blog/Scripts/activate**
+
+>**linux -> source blog/bin/activate**
 
 ### Install the dependencies of the project
-> pip install -r requirements.txt
+> **pip install -r requirements.txt**
 
 Then the next step is to create the database and execute the migration files.  
 You can inspect the **settings.py** file to see the database configurations  
