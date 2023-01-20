@@ -34,7 +34,7 @@ using **venv** or **pipenv** or any other python library that allows you
 to create a virtual environments.  
 
 ### Create a virtual environment using venv
-> python -m venv blog
+> **python -m venv blog**
 
 ### Activate the virtual environment
 
