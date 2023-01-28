@@ -3,6 +3,7 @@ version: '3.8'
 services:
   web:
     image: alphadev224/blog
+    container_name: blog_app
     volumes:
       - .:/usr/src/app
     ports:
@@ -11,15 +12,22 @@ services:
       - ./.env.dev
     depends_on:
       - db
+    networks:
+      - backend
   db:
     image: postgres:15-alpine
+    container_name: blog_db
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: blog
       POSTGRES_PASSWORD: blog224
       POSTGRES_DB_NAME: blog
+    networks:
+      - backend
 
 
 volumes:
   postgres_data:
+networks:
+  backend:
