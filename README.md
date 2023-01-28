@@ -37,7 +37,7 @@ The web app will be available at **localhost:8080/blog**.
 
 ## Load Sample Data
 
-To load the sample data just run the following command inside the container  
+To load the sample data just run the following command  
 
 > docker-compose exec web ./init.sh
 
